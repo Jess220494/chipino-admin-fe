@@ -37,7 +37,7 @@ import {
             <img src="/assets/shapes.svg" alt=""/>
             <IonCardHeader>
               <IonCardSubtitle>Squaids really loves</IonCardSubtitle>
-              <IonCardTitle>Chester</IonCardTitle>
+              <IonCardTitle>Chester and Ozzy</IonCardTitle>
             </IonCardHeader>
             <IonCardContent>
               <p>

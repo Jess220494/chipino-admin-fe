@@ -74,7 +74,7 @@ import {
             </IonCardHeader>
             <IonCardContent>
               <p>
-                <IonText color="dark"> Ion card text 2</IonText>
+                <IonText color="dark"> Ioncard text 2</IonText>
               </p>
             </IonCardContent>
           </IonCard>

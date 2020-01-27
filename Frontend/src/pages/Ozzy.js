@@ -15,15 +15,18 @@ import {
     IonMenuButton,
     IonPage,
     IonTitle,
-    IonToolbar
+    IonToolbar,
+    IonText
     } from '@ionic/react';
   import { book, build, colorFill, grid } from 'ionicons/icons';
   import React from 'react';
   import './Home.css';
-  
+
   const HomePage = () => {
     return (
       <IonPage>
+
+
         <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
@@ -32,6 +35,9 @@ import {
             <IonTitle>Oswald Cobblepot</IonTitle>
           </IonToolbar>
         </IonHeader>
+
+
+
         <IonContent>
           <IonCard className="welcome-card">
             <img src="/assets/shapes.svg" alt=""/>
@@ -43,6 +49,58 @@ import {
               <p>
                 Now that your app has been created, you'll want to start building out features and
                 components. Check out some of the resources below for next steps.
+              </p>
+            </IonCardContent>
+          </IonCard>
+
+          <IonCard className="welcome-card">
+            <img src="/assets/shapes.svg" alt=""/>
+            <IonCardHeader>
+              <IonCardSubtitle><IonText color="secondary">Test 123</IonText></IonCardSubtitle>
+              <IonCardTitle><IonText color="secondary">Test 1</IonText></IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+              <p>
+                <IonText color="secondary">Ion card text 1</IonText>
+              </p>
+            </IonCardContent>
+          </IonCard>
+
+          <IonCard className="welcome-card">
+            <img src="/assets/shapes.svg" alt=""/>
+            <IonCardHeader>
+              <IonCardSubtitle><IonText color="dark">Test 123</IonText></IonCardSubtitle>
+              <IonCardTitle><IonText color="dark">Test 2</IonText></IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+              <p>
+                <IonText color="dark"> Ioncard text 2</IonText>
+              </p>
+            </IonCardContent>
+          </IonCard>
+
+          <IonCard className="welcome-card">
+            <img src="/assets/shapes.svg" alt=""/>
+            <IonCardHeader>
+              <IonCardSubtitle><IonText color="primary">Test 123</IonText></IonCardSubtitle>
+              <IonCardTitle><IonText color="primary">Test 3</IonText></IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+              <p>
+                <IonText color="primary">Ion card test 3</IonText>
+              </p>
+            </IonCardContent>
+          </IonCard>
+
+          <IonCard className="welcome-card">
+            <img src="/assets/shapes.svg" alt=""/>
+            <IonCardHeader>
+              <IonCardSubtitle><IonText color="danger">Test 123</IonText></IonCardSubtitle>
+              <IonCardTitle><IonText color="danger">Test 4</IonText></IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+              <p>
+                <IonText color="danger">Ion card test 4</IonText> 
               </p>
             </IonCardContent>
           </IonCard>

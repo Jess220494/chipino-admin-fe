@@ -16,7 +16,6 @@ mongo = PyMongo(app)
 @app.route('/oswald', methods=['GET'])
 def home():
     return "I'm kinda cute.  A bit of a shit.  I love cats.  And I like to sit.  Chester is my cousin.  Max is my friend.  And I drive my mum around the bend.  Food is life.  I can't reach it when it's above. But I'm happy anyway.  Because all I need is love. "
-    
 
 @app.route('/user', methods=['POST'])
 def test():
@@ -44,5 +43,9 @@ def test3():
     #         return json.dumps(database_record)
     return json.dumps(all_database_records)
 
+@app.route('/login', methods=['POST'])
+def login_feat():
+    all_database_records = mongo.db.users.find_one({'username': request.json['username'], 'password': request.json['password']})
+    return json.dumps(all_database_records)
 
 app.run()

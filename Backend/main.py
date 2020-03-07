@@ -5,11 +5,15 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask_pymongo import PyMongo
+from flask_cors import CORS, cross_origin
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app.config['MONGO_DBNAME'] = 'chipinodb'
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/chipinodb'
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 mongo = PyMongo(app)
 

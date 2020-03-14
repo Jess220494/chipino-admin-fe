@@ -52,4 +52,30 @@ def login_feat():
     all_database_records = mongo.db.users.find_one({'username': request.json['username'], 'password': request.json['password']})
     return json.dumps(all_database_records)
 
+@app.route('/register', methods=['POST'])
+def profile_page():
+    view = mongo.db.profile
+    username = request.json['username']
+    title = request.json['title']
+    createdOn = request.json['createdOn']
+    avatar = request.json['avatar']
+    view.insert({'_id': str(uuid.uuid4()), 'username': username, 'title': title, 'createdOn': createdOn, 'avatar': avatar})
+    return {'username': username, 'title': title, 'createdOn': createdOn, 'avatar': avatar}
+
+@app.route('/profiles', methods=['GET'])
+def prof_():
+    find_profile = mongo.db.profile.find({})
+    return json.dumps(find_profile)
+
+# @app.route('/prof_page_', methods=['POST'])
+# def prof_page():
+#     database_records_all = mongo.db.profile.find_one({'username': request.json ['username']})
+#     return json.dumps(database_records_all)
+    
+
+@app.route('/profile', methods=['POST'])
+def profile_feat():
+    database_records_all = mongo.db.profile.find_one({'username': request.json ['username']})
+    return json.dumps(database_records_all)
+
 app.run()

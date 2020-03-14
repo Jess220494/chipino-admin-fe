@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import List from './pages/List';
 import Ozzy from './pages/Ozzy';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
 import { home, list } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -49,6 +50,11 @@ const appPages = [
     title: 'Login',
     url: '/login',
     icon: home
+  },
+  {
+    title: 'Profile',
+    url: '/profile',
+    icon: home
   }
 ];
 
@@ -62,6 +68,7 @@ const App = () => (
           <Route path="/home/list" component={List} exact={true} />
           <Route path="/home/ozzy" component={Ozzy} exact={true} />
           <Route path="/login" component={Login} exact={true} />
+          <Route path="/profile" component={Profile} exact={true} />
           <Route path="/" render={() => <Redirect to="/home"/> } exact={true} />
         </IonRouterOutlet>
       {/* </IonSplitPane> */}
